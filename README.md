@@ -7,4 +7,4 @@ https://github.com/danila-schelkov/supercell-swf
 
 To run the program, you need PVRTexToolCLI.exe (on Windows) or PVRTexToolCLI (on Linux) in the folder containing the .jar file.
 
-<video src="media/preview.mp4" autoplay loop muted playsinline width="100%"></video>
+![Converter in action](media/preview.gif)
