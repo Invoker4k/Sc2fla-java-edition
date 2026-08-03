@@ -92,13 +92,11 @@ mvn clean package
 ### Используемые библиотеки
 
 Проект построен на основе:
-
-[supercell-swf](https://github.com/danila-schelkov/supercell-swf)
-
-[sc-file](https://github.com/danila-schelkov/sc-file)
+* [supercell-swf](https://github.com/danila-schelkov/supercell-swf)
+* [sc-file](https://github.com/danila-schelkov/sc-file)
 
 Обе библиотеки распространяются под лицензией MIT.
 
-Благодарности
+### Благодарности
 
-Огромное спасибо [danila-schelkov](https://github.com/danila-schelkov) за создание библиотек [supercell-swf](https://github.com/danila-schelkov/supercell-swf) и [sc-file](https://github.com/danila-schelkov/sc-file), которые легли в основу данного конвертера.
+Огромное спасибо [@danila-schelkov](https://github.com/danila-schelkov) за создание библиотек `supercell-swf` и `sc-file`, которые легли в основу данного конвертера.
