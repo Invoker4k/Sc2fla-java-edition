@@ -1,12 +1,10 @@
 package com.Invoker4k.sc2fla;
 
 import dev.donutquine.swf.SupercellSWF;
-import dev.donutquine.swf.DisplayObjectOriginal;
 import dev.donutquine.swf.shapes.ShapeOriginal;
 import dev.donutquine.swf.shapes.ShapeDrawBitmapCommand;
 import dev.donutquine.swf.shapes.ShapePoint;
 import dev.donutquine.swf.movieclips.*;
-import dev.donutquine.swf.textfields.TextFieldOriginal;
 import dev.donutquine.swf.textures.SWFTexture;
 import dev.donutquine.swf.Export;
 import dev.donutquine.swf.ColorTransform;
@@ -14,21 +12,17 @@ import dev.donutquine.swf.Matrix2x3;
 import dev.donutquine.swf.TextureType;
 
 import org.apache.commons.math3.linear.*;
-import org.w3c.dom.*;
 
 import java.util.zip.ZipOutputStream;
 import java.nio.ShortBuffer;
 import java.awt.*;
-import java.awt.geom.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.Buffer;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 import java.util.List;
 import java.util.concurrent.*;
