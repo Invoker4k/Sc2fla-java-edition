@@ -1,4 +1,4 @@
-package com.Invoker4k.sc2fla;
+package com.invoker4k.sc2fla;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
@@ -16,6 +16,8 @@ public class Utils {
     public static final String RED = "\u001B[31m";
     public static final String MAGENTA = "\u001B[35m";
 
+    private static int lastPercent = -1;
+
     public static void info(String msg) {
         System.out.println(GREEN + "[INFO] " + msg + RESET);
     }
@@ -31,8 +33,14 @@ public class Utils {
     public static void progressBar(String info, int current, int total) {
         if (total <= 0) return;
         int percent = (current + 1) * 100 / total;
-        System.out.printf("\r%s[%3d%%] %s%s", GREEN, percent, info, RESET);
-        if (current + 1 == total) System.out.println();
+        if (percent != lastPercent) {
+            System.out.printf("\r%s[%3d%%] %s%s", GREEN, percent, info, RESET);
+            lastPercent = percent;
+        }
+        if (current + 1 == total) {
+            System.out.println();
+            lastPercent = -1;
+        }
     }
 
     public static class BinaryWriter {

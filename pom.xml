@@ -24,7 +24,6 @@
             <groupId>com.github.luben</groupId>
             <artifactId>zstd-jni</artifactId>
             <version>1.5.7-8</version>
-            <scope>runtime</scope>
         </dependency>
 
         <dependency>
@@ -62,7 +61,7 @@
                             <outputFile>${project.build.directory}/sc2fla.jar</outputFile>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.Invoker4k.sc2fla.Main</mainClass>
+                                    <mainClass>com.invoker4k.sc2fla.Main</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
