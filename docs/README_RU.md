@@ -1,4 +1,3 @@
-```markdown
 [◀ Назад в главное меню](../README.md)
 
 **Конвертер файлов Supercell (`.sc`) в проект Adobe Animate (`.fla`) на Java.**
