@@ -73,10 +73,12 @@ After successful execution, a file with the same name but with the `.fla` extens
 
 ## Texture handling features
 
-The program supports two main texture formats:
+The converter supports all three texture formats:
 
-- **KTX** – a standard compressed format, converted using `PVRTexToolCLI`.
-- **SCTX** – Supercell's proprietary format, requiring `SctxConverter.exe` for decoding.
+- **KTX** – a standard compressed format; converted using `PVRTexToolCLI`.
+- **SCTX** – a proprietary Supercell format; decoding requires `SctxConverter.exe`.  
+  On Linux, the program automatically detects the presence of Wine and runs `SctxConverter.exe` using it. If Wine is not installed, an error will be displayed.
+- **RAW** – standard raw pixel data.
 
 On Linux, the program automatically detects Wine and runs `SctxConverter.exe` through it. If Wine is not installed, an error will be displayed.
 
