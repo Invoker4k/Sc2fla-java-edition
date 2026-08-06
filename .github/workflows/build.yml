@@ -1,0 +1,40 @@
+name: Manual Maven Build & Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Version'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17' 
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Grant execute permission for mvnw
+      run: chmod +x mvnw
+
+    - name: Build with Maven
+      run: ./mvnw clean package
+
+    - name: Create Draft Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "target/sc2fla.jar"
+        tag: ${{ github.event.inputs.tag_name }}
+        name: "Release ${{ github.event.inputs.tag_name }}"
+        draft: true
+        token: ${{ secrets.GITHUB_TOKEN }}
